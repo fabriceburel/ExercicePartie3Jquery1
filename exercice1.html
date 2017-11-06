@@ -8,15 +8,16 @@
 <body>
   <form>
     <button type="button" name="button" id="clickButton">Envoyer</button>
-    <label for="compteur">Nombre de clique : </label><input type="nom" name="nom" value="" id="nombreClique" />
+    <label for="compteur">Nombre de clique : </label><input type="nom" name="nom" value="0" id="numberClick" />
   </form>
   <script>
-  var counterClick=0;
-  $('#nombreClique').val(counterClick);
-  $('#clickButton').click(function(){
-    counterClick++;
-    $('#nombreClique').val(counterClick);
-  })
+    $(function(){
+      var counterClick=0;
+      $('#clickButton').click(function(){
+        counterClick++;
+        $('#numberClick').val(counterClick);
+      })
+    });
   </script>
 </body>
 </html>
